@@ -1,7 +1,7 @@
 const fetchData = async () => {
     try{
-        const pokemonName = document.getElementById("pokemonName").ariaValueMax.toLowerCase();
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon/typhlosion");
+        const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
         if(!response.ok){
             throw new Error("Could not fetch data");
         }
@@ -13,4 +13,3 @@ const fetchData = async () => {
     }
 }
 
-fetchData();
