@@ -6,7 +6,8 @@ const fetchData = async () => {
             throw new Error("Could not fetch data");
         }
         const data = await response.json();
-        console.log(data);
+        const pokemonSprites = data.sprites.front_default;
+        const imgElement = document.getElementById("pokemonSprite")
     }
     catch(error){
         console.error(error.status)
