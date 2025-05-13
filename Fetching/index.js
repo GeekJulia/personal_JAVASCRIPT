@@ -8,6 +8,9 @@ const fetchData = async () => {
         const data = await response.json();
         const pokemonSprites = data.sprites.front_default;
         const imgElement = document.getElementById("pokemonSprite")
+
+        imgElement.src = pokemonSprites;
+        imgElement.style.display = "block"
     }
     catch(error){
         console.error(error.status)
