@@ -8,3 +8,6 @@ fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
     })
     .then(data => console.log(data.id))
     .catch(error => console.error(error))
+
+    You first fetch ==> assign to response
+    Assign the json format to a data, then begin to access what you want
